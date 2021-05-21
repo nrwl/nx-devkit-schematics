@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "my-schematic": {
+      "description": "Log out options.",
+      "factory": "./my-schematic/index#mySchematic",
+      "schema": "./my-schematic/schema.json"
+    }
+  }
+}

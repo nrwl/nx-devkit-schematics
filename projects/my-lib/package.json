@@ -1,11 +1,17 @@
 {
   "name": "my-lib",
   "version": "0.0.1",
+  "scripts": {
+    "prebuild": "../../node_modules/.bin/rimraf dist/my-lib && mkdir -p ../../dist/my-lib/schematics && cp -R schematics/ ../../dist/my-lib/schematics/",
+    "build": "../../node_modules/.bin/tsc -p tsconfig.schematics.json",
+    "postbuild": "../../node_modules/.bin/rimraf --glob ../../dist/my-lib/schematics/**/*.ts"
+  },
   "peerDependencies": {
-    "@angular/common": "^12.0.1",
-    "@angular/core": "^12.0.1"
+    "@angular/common": "^12.0.0",
+    "@angular/core": "^12.0.0"
   },
   "dependencies": {
     "tslib": "^2.1.0"
-  }
+  },
+  "schematics": "./schematics/collection.json"
 }
