@@ -1,5 +1,5 @@
 {
-  "name": "nx-schema",
+  "name": "nx-devkit-schematics",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
